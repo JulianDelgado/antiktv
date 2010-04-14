@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="title" content="Antik IPTV" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="language" content="sk" />
+
+<title>Antik IPTV</title>
+
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="/css/png_fix.css" />
+<![endif]-->
+
+<script type="text/javascript" src="/sf/prototype/js/prototype.js"></script>
+<script type="text/javascript" src="/sf/prototype/js/builder.js"></script>
+<script type="text/javascript" src="/sf/prototype/js/effects.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+</head>
+<body onload="init();
+        
+      "
+>
+
+  <div id="download_show" style="display:none;border: 0; height: 50%; width: 50%;position: absolute; left: 25%; top: 25%; color: black;">
+  </div>
+  
+  <div id="indicator" style="display:none">
+  	<img align="top" vspace="1" hspace="1" src="/images/frontend/common/ajax_indicator.gif" alt="Ajax_indicator" />  </div>
+
+  <table border="0" cellpadding="0" cellspacing="0" style="width:1000px;" align="center">
+    <tr>
+      <td height="75" valign="top">
+      
+      	<table height="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+    	  <tr>
+      		<td height="100%" valign="top">
+      		  <a href="/"><img class="header_logo" alt="Antik IPTV" src="/images/frontend/common/antik_iptv_logo_color.png" /></a>      		          	</td>
+        	<td>
+        		&nbsp;
+        	</td>
+        	<td width="100%" align="right" valign="bottom">
+        	
+        	  <div style="width:780px;" id="top_menu">
+    				    				  
+    				    			  </div>
+        	  
+        	</td>
+          </tr>
+        </table>
+        
+      </td>
+    </tr>
+    <tr>
+      <td height="500" valign="top" style="padding-top:5px;">
+        
+          
+
+<table cellpadding="3" cellspacing="0" width="100%">
+  <tr>
+    <td colspan="6" style="padding-right:4px;padding-left:4px;font:12px arial;color:white;background-color:#34629d;" valign="top">
+      Markíza&nbsp;-&nbsp;21.9.2008    </td>
+  </tr>
+  
+    
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198983.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198983', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198983','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#f2f5f9;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198983', '/epg/archiv_show_detail/id/198983', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198983')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      &nbsp;5:30    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#f2f5f9;">
+    TELEVÍZNE NOVINY    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#f2f5f9;" valign="top">
+      <div id="show_detail_198983"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198984.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198984', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198984','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#e9eff5;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198984', '/epg/archiv_show_detail/id/198984', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198984')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      &nbsp;6:00    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#e9eff5;">
+    Malý zajac Bugs a priatelia II.    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#e9eff5;" valign="top">
+      <div id="show_detail_198984"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198985.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198985', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198985','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#f2f5f9;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198985', '/epg/archiv_show_detail/id/198985', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198985')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      &nbsp;6:25    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#f2f5f9;">
+    Flintstonovci I.    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#f2f5f9;" valign="top">
+      <div id="show_detail_198985"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198986.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198986', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198986','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#e9eff5;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198986', '/epg/archiv_show_detail/id/198986', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198986')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      &nbsp;6:55    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#e9eff5;">
+    Casper I.    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#e9eff5;" valign="top">
+      <div id="show_detail_198986"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198987.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198987', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198987','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#f2f5f9;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198987', '/epg/archiv_show_detail/id/198987', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198987')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      &nbsp;7:20    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#f2f5f9;">
+    H2O: Stačí pridať vodu    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#f2f5f9;" valign="top">
+      <div id="show_detail_198987"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198988.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198988', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198988','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#e9eff5;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198988', '/epg/archiv_show_detail/id/198988', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198988')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      &nbsp;8:15    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#e9eff5;">
+    Xena I.    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#e9eff5;" valign="top">
+      <div id="show_detail_198988"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198989.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198989', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198989','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#f2f5f9;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198989', '/epg/archiv_show_detail/id/198989', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198989')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      &nbsp;9:15    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#f2f5f9;">
+    Láske neutečieš    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#f2f5f9;" valign="top">
+      <div id="show_detail_198989"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198990.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198990', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198990','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#e9eff5;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198990', '/epg/archiv_show_detail/id/198990', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198990')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      &nbsp;10:55    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#e9eff5;">
+    Čarodejnice VIII.    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#e9eff5;" valign="top">
+      <div id="show_detail_198990"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198991.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198991', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198991','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#f2f5f9;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198991', '/epg/archiv_show_detail/id/198991', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198991')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      &nbsp;12:40    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#f2f5f9;">
+    Zo zákulisia Markízy    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#f2f5f9;" valign="top">
+      <div id="show_detail_198991"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198992.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198992', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198992','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#e9eff5;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198992', '/epg/archiv_show_detail/id/198992', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198992')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      &nbsp;13:00    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#e9eff5;">
+    Na telo    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#e9eff5;" valign="top">
+      <div id="show_detail_198992"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198993.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198993', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198993','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#f2f5f9;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198993', '/epg/archiv_show_detail/id/198993', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198993')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      &nbsp;13:35    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#f2f5f9;">
+    Lampáreň    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#f2f5f9;" valign="top">
+      <div id="show_detail_198993"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198994.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198994', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198994','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#e9eff5;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198994', '/epg/archiv_show_detail/id/198994', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198994')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      &nbsp;14:15    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#e9eff5;">
+    Brácha za všechny peníze    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#e9eff5;" valign="top">
+      <div id="show_detail_198994"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198995.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198995', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198995','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#f2f5f9;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198995', '/epg/archiv_show_detail/id/198995', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198995')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      &nbsp;15:50    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#f2f5f9;">
+    Miss špeciálny agent 2: Krásna a nebezpečná    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#f2f5f9;" valign="top">
+      <div id="show_detail_198995"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198996.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198996', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198996','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#e9eff5;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198996', '/epg/archiv_show_detail/id/198996', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198996')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      &nbsp;18:10    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#e9eff5;">
+    Srdcové záležitosti    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#e9eff5;" valign="top">
+      <div id="show_detail_198996"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198997.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198997', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198997','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#f2f5f9;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198997', '/epg/archiv_show_detail/id/198997', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198997')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      &nbsp;18:50    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#f2f5f9;">
+    Počasie    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#f2f5f9;" valign="top">
+      <div id="show_detail_198997"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198998.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198998', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198998','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#e9eff5;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198998', '/epg/archiv_show_detail/id/198998', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198998')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      &nbsp;19:00    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#e9eff5;">
+    TELEVÍZNE NOVINY    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#e9eff5;" valign="top">
+      <div id="show_detail_198998"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/198999.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/198999', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=198999','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#f2f5f9;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_198999', '/epg/archiv_show_detail/id/198999', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_198999')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      &nbsp;19:25    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#f2f5f9;">
+    Športové noviny    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#f2f5f9;" valign="top">
+      <div id="show_detail_198999"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/199000.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/199000', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=199000','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#e9eff5;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_199000', '/epg/archiv_show_detail/id/199000', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_199000')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      &nbsp;19:30    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#e9eff5;">
+    PROMINENTI    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#e9eff5;" valign="top">
+      <div id="show_detail_199000"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/199001.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/199001', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=199001','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#f2f5f9;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_199001', '/epg/archiv_show_detail/id/199001', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_199001')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      &nbsp;20:00    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#f2f5f9;">
+    Slovensko má talent    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#f2f5f9;" valign="top">
+      <div id="show_detail_199001"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/199002.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/199002', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=199002','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#e9eff5;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_199002', '/epg/archiv_show_detail/id/199002', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_199002')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      &nbsp;21:35    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#e9eff5;">
+    Paparazzi    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#e9eff5;" valign="top">
+      <div id="show_detail_199002"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/199003.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/199003', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=199003','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#f2f5f9;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_199003', '/epg/archiv_show_detail/id/199003', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_199003')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      &nbsp;23:10    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#f2f5f9;">
+    Jasné nebezpečenstvo    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#f2f5f9;" valign="top">
+      <div id="show_detail_199003"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/199004.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/199004', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=199004','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#e9eff5;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_199004', '/epg/archiv_show_detail/id/199004', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_199004')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#e9eff5;" align="right" valign="top">
+      &nbsp;1:55    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#e9eff5;">
+    Férový zlodej    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#e9eff5;" valign="top">
+      <div id="show_detail_199004"></div>
+    </td>
+  </tr>
+    <tr>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+            <a href="javascript:void(0);" onclick="javascript:doGo('http://10.254.9.2/199005.ts');new Ajax.Updater('show_detail', '/epg/archiv_show_detail_under_screen/id/199005', {asynchronous:true, evalScripts:false, onComplete:function(request, json){new Effect.BlindDown('show_detail', {});}})">Sledovať</a>
+    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      <a href="javascript:void(0);" 
+         onclick="window.open('/tvarchiv/download?id=199005','download','width=580,height=500');">Stiahnuť</a>
+    </td>
+    <td align="right" style="padding-left:8px;font:11px arial;background-color:#f2f5f9;" valign="middle">
+       <a href="#" onclick="new Ajax.Updater('show_detail_199005', '/epg/archiv_show_detail/id/199005', {asynchronous:true, evalScripts:false, onComplete:function(request, json){Element.show('show_detail_199005')}}); return false;">Detaily</a>    </td>
+    <td style="padding-right:4px;font:11px arial;background-color:#f2f5f9;" align="right" valign="top">
+      &nbsp;3:50    </td>
+    <td width="100%" align="left" valign="top" nowrap="nowrap" style="font:11px arial;font-weight:bold;background-color:#f2f5f9;">
+    Paparazzi    </td>
+  </tr>
+  <tr>
+    <td colspan="6" style="padding:0px;font:11px arial;color:white;background-color:#f2f5f9;" valign="top">
+      <div id="show_detail_199005"></div>
+    </td>
+  </tr>
+</table>
+
+        
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="e9eff5" style="font:10px arial;color:#b0b9c2;padding:1px;" align="right">
+        IP: 10.8.86.41&nbsp;&nbsp;&nbsp;&nbsp;realizácia: peton&nbsp;© Antik computers & communications&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

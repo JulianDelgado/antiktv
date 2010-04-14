@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Compiler Value="/home/pascal/fpc-2.2.4/bin/fpc" Date="1238277825"/>
+  <Params Value=" -MObjFPC -Sgi -O1 -Xs -WG -vewnhi -l -Fu/home/pascal/lazarus-0.9.28.2/lcl/units/i386-linux/ -Fu/home/pascal/lazarus-0.9.28.2/lcl/units/i386-linux/gtk2/ -Fu/home/pascal/lazarus-0.9.28.2/packager/units/i386-linux/ -Fu/home/pascal/svn/antiktv/ -Fu. -FE/home/pascal/svn/antiktv/ -oantiktv -dLCL -dLCLgtk2 antiktv.lpr"/>
+</CONFIG>

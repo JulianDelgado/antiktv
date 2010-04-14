@@ -1,0 +1,71 @@
+object Form1: TForm1
+  Left = 350
+  Height = 658
+  Top = 190
+  Width = 504
+  ActiveControl = lbZoznam1
+  Caption = 'AntikTV - Archív'
+  ClientHeight = 658
+  ClientWidth = 504
+  OnCreate = FormCreate
+  Position = poDefaultPosOnly
+  LCLVersion = '0.9.28.2'
+  object lbZoznam1: TListBox
+    Left = 8
+    Height = 612
+    Top = 40
+    Width = 491
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ItemHeight = 0
+    OnDblClick = lbZoznam1DblClick
+    PopupMenu = PopupMenu1
+    TabOrder = 0
+    TopIndex = -1
+  end
+  object cbStanica1: TComboBox
+    Left = 8
+    Height = 29
+    Top = 6
+    Width = 240
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      '(najprv zvoľte TV stanicu)'
+      'STV1'
+      'STV2'
+      'Markiza'
+      'CT1'
+      'CT2'
+    )
+    OnSelect = cbStanica1Change
+    Style = csDropDownList
+    TabOrder = 1
+    Text = '(najprv zvoľte TV stanicu)'
+  end
+  object btnDatum1: TButton
+    Left = 256
+    Height = 29
+    Top = 6
+    Width = 243
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'Dátum'
+    OnClick = btnDatum1Click
+    TabOrder = 2
+  end
+  object CalendarDialog1: TCalendarDialog
+    Title = 'Vyberte deň'
+    Date = 39699
+    OKCaption = '&OK'
+    CancelCaption = 'Zrušiť'
+    left = 320
+    top = 8
+  end
+  object PopupMenu1: TPopupMenu
+    left = 104
+    top = 232
+    object mnuKopirovatOdkaz1: TMenuItem
+      Caption = 'Kopírovať odkaz'
+      OnClick = mnuKopirovatOdkaz1Click
+    end
+  end
+end

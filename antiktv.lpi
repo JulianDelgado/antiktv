@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="7"/>
+    <General>
+      <Flags>
+        <LRSInOutputDirectory Value="False"/>
+      </Flags>
+      <MainUnit Value="0"/>
+      <TargetFileExt Value=""/>
+      <ActiveEditorIndexAtStart Value="0"/>
+    </General>
+    <VersionInfo>
+      <ProjectVersion Value=""/>
+      <Language Value=""/>
+      <CharSet Value=""/>
+    </VersionInfo>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="11">
+      <Unit0>
+        <Filename Value="antiktv.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="antiktv"/>
+        <UsageCount Value="22"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="main_form_f.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="main_form_f"/>
+        <CursorPos X="4" Y="57"/>
+        <TopLine Value="46"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="parser_antik_iptv_p.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="parser_antik_iptv_p"/>
+        <CursorPos X="27" Y="11"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="22"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="parser_p.pas"/>
+        <UnitName Value="parser_p"/>
+        <CursorPos X="9" Y="20"/>
+        <TopLine Value="5"/>
+        <UsageCount Value="20"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="piped_process_p.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="piped_process_p"/>
+        <CursorPos X="32" Y="47"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="22"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="piped_process_p.pas.bak"/>
+        <CursorPos X="1" Y="5"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="10"/>
+        <SyntaxHighlighter Value="None"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../../svn-lazarus/lcl/editbtn.pas"/>
+        <UnitName Value="EditBtn"/>
+        <CursorPos X="50" Y="348"/>
+        <TopLine Value="329"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../svn-lazarus/lcl/calendar.pp"/>
+        <UnitName Value="Calendar"/>
+        <CursorPos X="34" Y="49"/>
+        <TopLine Value="29"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../../../usr/share/fpcsrc/rtl/objpas/dateutils.pp"/>
+        <UnitName Value="dateutils"/>
+        <CursorPos X="7" Y="1"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="10"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../../../usr/share/fpcsrc/rtl/objpas/dateutil.inc"/>
+        <CursorPos X="10" Y="398"/>
+        <TopLine Value="385"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../svn-lazarus/ide/lazarus.pp"/>
+        <UnitName Value="Lazarus"/>
+        <CursorPos X="9" Y="48"/>
+        <TopLine Value="44"/>
+        <UsageCount Value="10"/>
+      </Unit10>
+    </Units>
+    <JumpHistory Count="6" HistoryIndex="5">
+      <Position1>
+        <Filename Value="main_form_f.pas"/>
+        <Caret Line="63" Column="23" TopLine="37"/>
+      </Position1>
+      <Position2>
+        <Filename Value="main_form_f.pas"/>
+        <Caret Line="56" Column="22" TopLine="42"/>
+      </Position2>
+      <Position3>
+        <Filename Value="main_form_f.pas"/>
+        <Caret Line="25" Column="28" TopLine="13"/>
+      </Position3>
+      <Position4>
+        <Filename Value="main_form_f.pas"/>
+        <Caret Line="31" Column="56" TopLine="30"/>
+      </Position4>
+      <Position5>
+        <Filename Value="main_form_f.pas"/>
+        <Caret Line="68" Column="209" TopLine="53"/>
+      </Position5>
+      <Position6>
+        <Filename Value="main_form_f.pas"/>
+        <Caret Line="69" Column="3" TopLine="63"/>
+      </Position6>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="8"/>
+    <Parsing>
+      <SyntaxOptions>
+        <CStyleOperator Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <Linking>
+      <Debugging>
+        <UseLineInfoUnit Value="False"/>
+        <StripSymbols Value="True"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="2">
+      <Item1>
+        <Name Value="ECodetoolError"/>
+      </Item1>
+      <Item2>
+        <Name Value="EFOpenError"/>
+      </Item2>
+    </Exceptions>
+  </Debugging>
+</CONFIG>
