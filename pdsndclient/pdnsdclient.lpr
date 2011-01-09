@@ -1,0 +1,21 @@
+program pdnsdclient;
+
+{$mode objfpc}{$H+}
+
+uses
+  {$IFDEF UNIX}{$IFDEF UseCThreads}
+  cthreads,
+  {$ENDIF}{$ENDIF}
+  Interfaces, // this includes the LCL widgetset
+  Forms, Unit1, LResources
+  { you can add units after this };
+
+{$IFDEF WINDOWS}{$R pdnsdclient.rc}{$ENDIF}
+
+begin
+  {$I pdnsdclient.lrs}
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.
+
