@@ -109,7 +109,7 @@ begin
         sl.Add(s);
       end;
     // confirm deny
-    if MessageDlg('Confirm blacklisting following hosts:'#13#13+sl.text+#13#13'Are you sure you want to blacklist them?',mtConfirmation,[mbYes,mbCancel],0) <> mrYes then
+    if MessageDlg('Confirm BLACKLIST following hosts:'#13#13+sl.text+#13#13'Are you sure you want to BLACKLIST them?',mtWarning,[mbYes,mbCancel],0) <> mrYes then
        exit;
     // add selected to blacklist so they wont be displayed ever again (e.g. facebook)
     blacklist.AddStrings(sl);
