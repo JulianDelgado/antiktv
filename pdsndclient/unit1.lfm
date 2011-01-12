@@ -2,11 +2,11 @@ object Form1: TForm1
   Left = 304
   Height = 553
   Top = 214
-  Width = 672
-  ActiveControl = btnRefresh1
+  Width = 612
+  ActiveControl = btnClear1
   Caption = 'pdnsd client'
   ClientHeight = 553
-  ClientWidth = 672
+  ClientWidth = 612
   OnCreate = FormCreate
   Position = poScreenCenter
   LCLVersion = '0.9.28.2'
@@ -14,7 +14,7 @@ object Form1: TForm1
     Left = 8
     Height = 25
     Top = 8
-    Width = 139
+    Width = 80
     Caption = '&Refresh'
     OnClick = btnRefresh1Click
     TabOrder = 0
@@ -23,41 +23,51 @@ object Form1: TForm1
     Left = 8
     Height = 504
     Top = 40
-    Width = 656
+    Width = 596
     Anchors = [akTop, akLeft, akRight, akBottom]
     Font.Name = 'dejavu sans mono'
     Font.Pitch = fpFixed
     ItemHeight = 0
     OnItemClick = CheckListBox1ItemClick
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 5
     TopIndex = -1
   end
   object btnAllow1: TButton
-    Left = 368
+    Left = 308
     Height = 25
     Top = 8
     Width = 144
+    Anchors = [akTop, akRight]
     Caption = '&Allow'
     OnClick = btnAllow1Click
-    TabOrder = 2
+    TabOrder = 3
   end
   object btnDeny1: TButton
-    Left = 520
+    Left = 460
     Height = 25
     Top = 8
     Width = 144
+    Anchors = [akTop, akRight]
     Caption = '&Deny'
     OnClick = btnDeny1Click
-    TabOrder = 3
+    TabOrder = 4
   end
   object btnClear1: TButton
-    Left = 152
+    Left = 96
     Height = 25
     Top = 8
-    Width = 75
+    Width = 56
     Caption = '&Clear'
     OnClick = btnClearRecent1Click
     TabOrder = 1
+  end
+  object edtFilter1: TEdit
+    Left = 160
+    Height = 27
+    Top = 7
+    Width = 140
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 2
   end
 end

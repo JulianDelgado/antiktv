@@ -24,6 +24,7 @@ type
     btnDeny1: TButton;
     btnClear1: TButton;
     CheckListBox1: TCheckListBox;
+    edtFilter1: TEdit;
     procedure btnDeny1Click(Sender: TObject);
     procedure btnRefresh1Click(Sender: TObject);
     procedure btnAllow1Click(Sender: TObject);
@@ -74,22 +75,29 @@ begin
 end;
 
 procedure TForm1.btnRefresh1Click(Sender: TObject);
-var i : integer;
+var i,k : integer;
 begin
   // load /var/cache/pdnsd/recent and show in checklistbox in reverse order
   recent.LoadFromFile('/var/cache/pdnsd/recent');
   CheckListBox1.Items.Clear;
+  k := 0;
   for i := recent.count-1 downto 0 do
   begin
+    // filter
+    if edtFilter1.Text<>'' then
+      if pos(edtFilter1.Text,recent[i]) <= 0 then
+        continue;
     // dont display hosts on blacklist
     if blacklist.IndexOf(recent[i]) >= 0 then
        continue;
     // dont display hosts already in /etc/hosts
     if InHosts(recent[i]) then
       continue;
+    inc(k);
     // add to checklistbox
     CheckListBox1.Items.add(recent[i]);
   end;
+  Caption := 'pdnsd client - '+inttostr(CheckListBox1.Items.Count)+' / '+inttostr(k)+' / '+inttostr(recent.count)+' items';
 end;
 
 procedure TForm1.btnDeny1Click(Sender: TObject);
@@ -186,6 +194,7 @@ begin
   recent.Clear;
   recent.SaveToFile('/var/cache/pdnsd/recent');
   CheckListBox1.Items.Clear;
+  ShowMessage('After clearing recent cache, it is recomended to restart pdnsd daemon!');
 end;
 
 procedure TForm1.CheckListBox1ItemClick(Sender: TObject; Index: integer);
