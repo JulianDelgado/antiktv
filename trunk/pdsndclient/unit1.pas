@@ -23,8 +23,10 @@ type
     btnAllow1: TButton;
     btnDeny1: TButton;
     btnClear1: TButton;
+    btnCheckHost: TButton;
     CheckListBox1: TCheckListBox;
     edtFilter1: TEdit;
+    procedure btnCheckHostClick(Sender: TObject);
     procedure btnDeny1Click(Sender: TObject);
     procedure btnRefresh1Click(Sender: TObject);
     procedure btnAllow1Click(Sender: TObject);
@@ -43,6 +45,8 @@ type
 
 var
   Form1: TForm1; 
+
+function GetHostIp(AHostName : string) : string;
 
 implementation
 
@@ -117,8 +121,8 @@ begin
         sl.Add(s);
       end;
     // confirm deny
-    if MessageDlg('Confirm BLACKLIST following hosts:'#13#13+sl.text+#13#13'Are you sure you want to BLACKLIST them?',mtWarning,[mbYes,mbCancel],0) <> mrYes then
-       exit;
+    //if MessageDlg('Confirm BLACKLIST following hosts:'#13#13+sl.text+#13#13'Are you sure you want to BLACKLIST them?',mtWarning,[mbYes,mbCancel],0) <> mrYes then
+    //   exit;
     // add selected to blacklist so they wont be displayed ever again (e.g. facebook)
     blacklist.AddStrings(sl);
     // save new blacklist and refresh view
@@ -127,6 +131,53 @@ begin
   finally
     sl.Free;
   end;
+end;
+
+procedure TForm1.btnCheckHostClick(Sender: TObject);
+var i,a : integer;
+    s,ip,host,ip2 : string;
+    start : boolean;
+begin
+  // this check all items in /etc/hosts if they contain space (forbiden) or IP that is no longer valid
+  hosts.LoadFromFile('/etc/hosts');
+  hosts.SaveToFile('/tmp/hosts.old');
+  CheckListBox1.Items.Clear;
+  start := false;
+  for i := 0 to hosts.count-1 do
+  begin
+    caption := inttostr(i)+'/'+inttostr(hosts.count);
+    Application.ProcessMessages;
+    s := trim(hosts[i]);
+    // only start parsing host from "# --pdnsd start--" mark
+    if s = '# --pdnsd start--' then
+      start := true;
+    if not start then
+      continue;
+    // split line to IP and host
+    a := pos(' ',s);
+    if (length(s)<=0) or (a <= 0) then
+      continue;
+    ip := trim(copy(s,1,a-1));
+    if ip = '#' then
+      continue;
+    host := trim(copy(s,a+1,maxint));
+    // more address per IP are not allowed for now, just keep only first one
+    a := pos(' ',host);
+    if a > 0 then
+    begin
+      host := trim(copy(host,1,a-1));
+      // remove second host
+      hosts[i] := ip+' '+host;
+    end;
+    // check real IP address
+    ip2 := GetHostIp(host);
+    // if it looks reasonable (good length, few dots) update it
+    if (length(ip2) >= 7)and(pos('.',ip2)>0) then
+      hosts[i] := ip2+' '+host;
+    CheckListBox1.Items.Add('ok: '+hosts[i]);
+    application.processmessages;
+  end;
+  hosts.SaveToFile('/etc/hosts');
 end;
 
 function GetHostIp(AHostName : string) : string;
@@ -175,8 +226,8 @@ begin
         sl.add(ip+' '+host);
       end;
     // confirm adding
-    if MessageDlg('Confirm adding following hosts:'#13#13+sl.text+#13#13'Are you sure you want to add them to /etc/hosts?',mtConfirmation,[mbYes,mbCancel],0) <> mrYes then
-       exit;
+    //if MessageDlg('Confirm adding following hosts:'#13#13+sl.text+#13#13'Are you sure you want to add them to /etc/hosts?',mtConfirmation,[mbYes,mbCancel],0) <> mrYes then
+    //   exit;
     // add to /etc/hosts and save it!
     hosts.LoadFromFile('/etc/hosts');
     hosts.AddStrings(sl);

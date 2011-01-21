@@ -3,7 +3,7 @@ object Form1: TForm1
   Height = 553
   Top = 214
   Width = 612
-  ActiveControl = btnClear1
+  ActiveControl = btnRefresh1
   Caption = 'pdnsd client'
   ClientHeight = 553
   ClientWidth = 612
@@ -63,11 +63,20 @@ object Form1: TForm1
     TabOrder = 1
   end
   object edtFilter1: TEdit
-    Left = 160
+    Left = 192
     Height = 27
     Top = 7
-    Width = 140
+    Width = 108
     Anchors = [akTop, akLeft, akRight]
     TabOrder = 2
+  end
+  object btnCheckHost: TButton
+    Left = 159
+    Height = 25
+    Top = 8
+    Width = 27
+    Caption = 'H'
+    OnClick = btnCheckHostClick
+    TabOrder = 6
   end
 end
