@@ -2,15 +2,11 @@
 Simple buffer for storing requested hosts in pdnsd and print them to stdout only once
 as they are requested multiple times, often 6x in a row, then requested again few seconds later
 
-You should run pdnsd like this:
-
-
-
 TODO:
 ok - push address to buffer
 ok - push every address only once!
 ok - remove trailing dot from string
-- do not depend on parsing output in external bash script and append addresses to special log automatically
+ok - do not depend on parsing output in external bash script and append addresses to special log automatically
 */
 
 #define PB_SIZE 500
@@ -19,6 +15,8 @@ int pb_pointer = 0;
 
 void pb_push(char * s) {
     // add one string to buffer and increment pointer
+    printf("pb_push: begin\n");
+    fflush(stdout);
     int i,len;
     char poms[256];
     // remove trailing dot
@@ -29,9 +27,12 @@ void pb_push(char * s) {
     // first, go throught entire buffer and check if "s" isn't already in the buffer
     for (i=0; i<PB_SIZE; i++)
       if (pb_buffer[i] != NULL) 
-        if (strcmp(pb_buffer[i],poms) == 0)
+        if (strcmp(pb_buffer[i],poms) == 0) {
           // string already in buffer, do nothing!
+          printf("pb_push: end (already in buffer)\n");
+          fflush(stdout);
           return;
+        }
     // allocate it if necessary
     if (pb_buffer[pb_pointer] == NULL)
       pb_buffer[pb_pointer] = (char*)(malloc(256*sizeof(char)));
@@ -47,6 +48,8 @@ void pb_push(char * s) {
     FILE *out = fopen("/var/cache/pdnsd/recent", "a");
     fprintf(out, "%s\n", poms);
     fclose(out);
+    printf("pb_push: end\n");
+    fflush(stdout);
 }
 
 void pb_debug(char * note) {
