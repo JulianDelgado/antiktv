@@ -12,7 +12,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  Menus, StdCtrls, CheckLst, Process, Sockets;
+  Menus, StdCtrls, CheckLst, ExtCtrls, Process, Sockets;
 
 type
 
@@ -26,6 +26,7 @@ type
     btnCheckHost: TButton;
     CheckListBox1: TCheckListBox;
     edtFilter1: TEdit;
+    IdleTimer1: TIdleTimer;
     procedure btnCheckHostClick(Sender: TObject);
     procedure btnDeny1Click(Sender: TObject);
     procedure btnRefresh1Click(Sender: TObject);
@@ -33,6 +34,7 @@ type
     procedure btnClearRecent1Click(Sender: TObject);
     procedure CheckListBox1ItemClick(Sender: TObject; Index: integer);
     procedure FormCreate(Sender: TObject);
+    procedure IdleTimer1Timer(Sender: TObject);
   private
     { private declarations }
   public
@@ -63,6 +65,12 @@ begin
   blacklist.LoadFromFile('/etc/hosts.blacklist');
   // initial refresh
   btnRefresh1.Click;
+end;
+
+procedure TForm1.IdleTimer1Timer(Sender: TObject);
+begin
+  // close after 30s idle
+  Close;
 end;
 
 function TForm1.InHosts(AHostName: string): boolean;
